@@ -1,0 +1,22 @@
+<h1>{{ car.name_car }}</h1>
+<p>{{ car.description }}</p>
+
+# картинка машин
+
+{% if car.image %}
+     <img src="{{ car.image.url }}" alt="" width="400" height="300">
+{% endif %}
+
+
+
+
+<p><b>Марка и модель:</b> {{ car.brand_model }}</p>
+<p><b>Год выпуска:</b> {{ car.year }}</p>
+<p><b>Цена:</b> {{ car.price }}</p>
+<p><b>Цвет:</b> {{ car.color }}</p>
+<p><b>Объем двигателя:</b> {{ car.engine_volume }}</p>
+<p><b>Тип топлива:</b> {{ car.fuel_type }}</p>
+<p><b>Страна:</b> {{ car.country }}</p>
+
+</b>
+<a href="{% url 'car_list %'}">Назад к списку машин</a>

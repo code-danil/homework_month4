@@ -1,0 +1,12 @@
+{% for car in cars %}
+    <h1>{{ car.name_car }}</h1>
+    <p>{{ car.description }}</p>
+
+    {% if car.image %}
+        <img src="{{ car.image.url }}" alt="" width="300" height="200">
+    {% endif %}
+
+    <br>
+    <b><a href="{% url 'car_detail' pk=car.pk %}">Подробнее</a></b>
+    <hr>
+{% endfor %}
