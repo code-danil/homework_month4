@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список категорий</title>
+</head>
+<body>
+    <h1>Выберите категорию товаров:</h1>
+    <ul>
+        {% for cat in categories %}
+            <li>
+                
+                <a href="{% url 'category_products' cat.id %}">{{ cat.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
