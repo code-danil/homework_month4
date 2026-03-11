@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+</html>
+<body>
+    <h1>Список водителей</h1>
+    <a href="/drivers/create/">Добавить водителя</a>
+    <hr>
+    {% for driver in drivers %}
+        <p>{{ driver.fio }} - {{ driver.car_choice }} - Стаж: {{ driver.exprience }} лет</p>
+        <a href="/drivers/update/{{ driver.id }}/">Изменить</a>
+        <a href="/drivers/delete/{{ driver.id }}/">Удалить</a>
+        <hr>
+        {% endfor %}
+</body>
+</html>
+    
