@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация IT</title>
+</head>
+<body>
+    <h1>Анкета IT-специалиста</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить заявку</button>
+    </form>
+</body>
+</html>
